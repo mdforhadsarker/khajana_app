@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "id": "PT-21-01",
+            "name": "Raw Material",
+            "namebn": "কাচামাল",
+            "snumber": 1.1,
+            "status": "Active"
+        },
+        {
+            "id": "PT-21-02",
+            "name": "Trading",
+            "namebn": "বাণিজ্য",
+            "snumber": 1.4,
+            "status": "Active"
+        },
+        {
+            "id": "PT-21-03",
+            "name": "Finishined Goods",
+            "namebn": "তৈরি পণ্য",
+            "snumber": 1.2,
+            "status": "Active"
+        },
+        {
+            "id": "PT-21-04",
+            "name": "Capital Machinery",
+            "namebn": "মূলধন যন্ত্রপাতি",
+            "snumber": 1.5,
+            "status": "Active"
+        },
+        {
+            "id": "PT-21-05",
+            "name": "PM Used in production",
+            "namebn": "উৎপাদনে ব্যাবহারিত মোড়ক",
+            "snumber": 1.7,
+            "status": "Active"
+        },
+        {
+            "id": "PT-21-06",
+            "name": "Gas, Electricity",
+            "namebn": "গ্যাস, বিদ্যুৎ",
+            "snumber": 1.9,
+            "status": "Active"
+        }
+    ]
+}
