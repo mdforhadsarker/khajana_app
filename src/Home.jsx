@@ -3,13 +3,13 @@ import TopNav from "./TopNav";
 import { AiOutlineEdit, AiFillEye } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import axios from '../axiosinstance';
 
 function Home() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/products")
+      .get(`/`)
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -17,7 +17,7 @@ function Home() {
   return (
     <div className=" max-w-7xl mx-auto items-center p-4 ">
       <TopNav />
-      <dive className="flex justify-start py-8">
+      <div className="flex justify-start py-8">
         <Link to="/create">
           <button
             onClick={() => {
@@ -29,7 +29,7 @@ function Home() {
             Add New
           </button>
         </Link>
-      </dive>
+      </div>
 
       <div className=" max-w-7xl mx-auto flex relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
