@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import TopNav from "./TopNav";
 import { AiOutlineEdit, AiFillEye } from "react-icons/ai";
-import { AiOutlinePlus } from "react-icons/ai";
+import { FaPlus } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import axios from '../axiosinstance';
+import axios from "../axiosinstance";
 
 function Home() {
   const [data, setData] = useState([]);
@@ -19,14 +19,9 @@ function Home() {
       <TopNav />
       <div className="flex justify-start py-8">
         <Link to="/create">
-          <button
-            onClick={() => {
-              console.log("Clicked");
-            }}
-            className="space-x-4 inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-blue-600 border border-blue-700 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none "
-          >
-            <AiOutlinePlus className="space-x-4 " />
-            Add New
+          <button className="space-x-2  inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-blue-600 border border-blue-700 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none ">
+            <FaPlus />
+            <span>Add New</span>
           </button>
         </Link>
       </div>
@@ -70,7 +65,9 @@ function Home() {
                 <td className="px-6 py-4"> {d.name}</td>
                 <td className="px-6 py-4">{d.namebn}</td>
                 <td className="px-6 py-4">{d.snumber}</td>
-                <td className="px-6 py-4">{d.status}</td>
+                <td className="px-6 py-4 text-green-600 font-medium ">
+                  {d.status}
+                </td>
                 <td className="flex items-center px-6 py-4 space-x-3 	">
                   <Link to={`/view/${d.id}`}>
                     <button
